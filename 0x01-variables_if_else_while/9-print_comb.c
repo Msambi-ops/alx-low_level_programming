@@ -1,11 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - main block
- * Description: Print all possible combinations fo single-digit numbers.
- * You can only use `putchar` to print to console
+ * main - Entry point
  *
- * Return: 0
+ * Return: Always 0 (Success)
  */
 
 int main(void)
