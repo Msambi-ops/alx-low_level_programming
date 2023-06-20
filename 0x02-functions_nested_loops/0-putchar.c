@@ -5,12 +5,13 @@
  *
  * Return: Always 0 (Successful)
  */
+
 int main(void)
 {
 	char myFunction[] = "_putchar";
-	int i;
+	int i = 0;
 
-	while (myFunction[i] != '\0')
+	while (myFunction[] != '\0')
 	{
 		_putchar(myFunction[i]);
 		i++;
