@@ -9,7 +9,7 @@ int main(void)
 {
 	char prnt[] = "_putchar";
 	int i;
-	
+
 	while (prnt[i] != '\0')
 	{
 		_putchar(prnt[i]);
