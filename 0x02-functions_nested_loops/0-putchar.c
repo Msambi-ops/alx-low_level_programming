@@ -8,10 +8,10 @@
 
 int main(void)
 {
-	char myFunction[] = "_putchar";
+	char myFunction[8] = "_putchar";
 	int i = 0;
 
-	while (myFunction[] != '\0')
+	while (i < 0)
 	{
 		_putchar(myFunction[i]);
 		i++;
