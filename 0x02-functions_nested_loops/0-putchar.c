@@ -7,12 +7,12 @@
  */
 int main(void)
 {
-	char _putchar[] = "_putchar";
+	char myFunction[] = "_putchar";
 	int i;
 
-	while (_putchar[i] != '\0')
+	while (myFunction[i] != '\0')
 	{
-		_putchar(_putchar[i]);
+		_putchar(myFunction[i]);
 		i++;
 	}
 	_putchar('\n');
