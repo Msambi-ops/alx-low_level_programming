@@ -2,13 +2,13 @@
 
 /**
  *_isdigit - checks for a digit
- *@c: type integer
+ *@c: type integer parameter
  *Return: 1 if c is a digit, 0 if otherwise
  */
 
 int _isdigit(int c)
 {
-	if (i >= '0' && i <= '9')
+	if (c >= '0' && c <= '9')
 	{
 	return (1);
 	}
