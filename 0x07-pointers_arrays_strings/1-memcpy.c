@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _isupper - This checks for Uppercase char
- *
- * @c: This is a char
- *
- * Return: always 0
+ *_memcpy - copies memory area
+ *@dest: char param
+ *@src: char param
+ *@n: int param
+ *Return: dest
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
