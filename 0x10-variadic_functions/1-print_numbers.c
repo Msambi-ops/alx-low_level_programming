@@ -1,5 +1,6 @@
 #include "variadic_functions.h"
 #include <stdio.h>
+#include <stdarg.h>
 /**
 * print_numbers - function that prints numbers
 * @n: number of arguments
@@ -13,19 +14,15 @@ va_list ap;
 unsigned int i;
 
 va_start(ap, n);
-if (separator != NULL)
-{
+
 for (i = 0; i < n; i++)
 {
 printf("%d", va_arg(ap, int));
 
-if (i != (n - 1))
-{
-printf("%s", separator);
+if (i != (n - 1) && separator != NULL)
+	printf("%s", separator);
 }
-}
-va_end(ap);
 printf("\n");
-}
 
+va_end(ap);
 }
