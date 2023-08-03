@@ -3,9 +3,9 @@
 /**
  * add_nodeint_end - the funct adds a node at the end of a linked list.
  * @head: points to the first element in the list.
- * @n: the data to insert in the new element
+ * @n: the data to insert in the new element.
  *
- * Return: returns a pointer to the new node, or NULL if it fails
+ * Return: returns pointer to the new node, or NULL if it fails.
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
@@ -26,7 +26,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	}
 
 	while (tmp->next)
-		tmp = temp->next;
+		tmp = tmp->next;
 
 	tmp->next = new;
 
