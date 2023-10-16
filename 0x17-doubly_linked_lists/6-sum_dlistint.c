@@ -1,29 +1,46 @@
 #include "lists.h"
 
-/**
- * sum_dlistint - returns the sum of all the data (n)
- * of a doubly linked list
+/*
+ * insert_dnodeint_at_index - Inserts a new node in a dlistint_t
+ *                            list at a given position.
+ * @h: A pointer to the head of the dlistint_t list.
+ * @idx: The position to insert the new node.
+ * @n: The integer for the new node to contain.
  *
- * @head: head of the list
- * Return: sum of the data
+ * Return: If the function fails - NULL.
+ *         Otherwise - the address of the new node.
  */
-int sum_dlistint(dlistint_t *head)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	int sum;
+	dlistint_t *tmp = *h, *new;
 
-	sum = 0;
+	/* If the index is 0, insert at the beginning of the list. */
+	if (idx == 0)
+	return (add_dnodeint(h, n));
 
-	if (head != NULL)
+	/* Traverses the list to reach the desired position. */
+	for (; idx != 1; idx--)
 	{
-		while (head->prev != NULL)
-			head = head->prev;
-
-		while (head != NULL)
-		{
-			sum += head->n;
-			head = head->next;
-		}
+	tmp = tmp->next;
+	if (tmp == NULL)
+	return (NULL);
 	}
 
-	return (sum);
+	/* If the desired position is at the end, insert at the end of the list. */
+	if (tmp->next == NULL)
+	return (add_dnodeint_end(h, n));
+
+	/* Allocates the  memory for the new node. */
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+	return (NULL);
+
+	/* Sets the value of the new node and update the links. */
+	new->n = n;
+	new->prev = tmp;
+	new->next = tmp->next;
+	tmp->next->prev = new;
+	tmp->next = new;
+
+	return (new);
 }
